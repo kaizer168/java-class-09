@@ -16,3 +16,4 @@
 ### 详细说说这条 SQL 的锁定情况： delete from tt where uid = 666 ;
 
 ## 题目 02- 请你说一说 MySQL 的 SQL 优化
+查看 SQL 执行计划，在 SQL 语句前加上 explain。

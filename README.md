@@ -18,18 +18,16 @@
 ## 题目 02- 请你说一说 MySQL 的 SQL 优化
 查看 SQL 执行计划，在 SQL 语句前加上 explain。
 重点关注type访问类型, 按照以下性能排序从好到差：  
-1. system
-2. const
-3. eq_ref
-4. ref
-5. fulltext
-6. ref_or_null
-7. unique_subquery
-8. index_subquery
-9. range
+1. system  
+2. const 唯一性索引或主键  
+3. eq_ref 唯一性索引  
+4. ref 非唯一性索引  
+5. fulltext  
+6. ref_or_null  
+7. unique_subquery  
+8. index_subquery  
+9. range 范围查询  
 10. index_merge
-11. index
-12. ALL
-参照以上排序，修改SQL语句以得到更高的性能。
-
-
+11. index 查询结果列中使用索引  
+12. ALL 全表扫描  
+参照以上排序，修改SQL语句以得到更高的性能，尽量避免 ALL 全表扫描。  
